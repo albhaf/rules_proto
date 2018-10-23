@@ -14,9 +14,9 @@ def java_proto_library(**kwargs):
     native.java_library(
         name = name,
         srcs = [name_pb],
-        deps = ["//java:proto_deps"],
+        deps = ["@org_pubref_rules_proto//java:proto_deps"],
         exports = [
-            "//java:proto_deps",
+            "@org_pubref_rules_proto//java:proto_deps",
         ],
         visibility = visibility,
     )
@@ -35,9 +35,9 @@ def java_grpc_library(**kwargs):
     native.java_library(
         name = name,
         srcs = [name_pb],
-        deps = ["//java:grpc_deps"],
+        deps = ["@org_pubref_rules_proto//java:grpc_deps"],
         exports = [
-            "//java:grpc_deps",
+            "@org_pubref_rules_proto//java:grpc_deps",
         ],
         visibility = visibility,
     )
